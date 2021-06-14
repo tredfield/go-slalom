@@ -16,8 +16,8 @@ This repository and guides will help you
 ## Guides
 
 - [Pre-requisite Instructions](docs/prereqs.md)
-- [Why Go](docs/why-go.md)
 - [Why Kubernetes](docs/why-kubernetes.md)
+- [Why Go](docs/why-go.md)
 - [Hello World in Go](docs/go-hello-world.md)
 - [Run go-slalom](docs/build-go-slalom.md)
 - [Deploy go-slalom with skaffold](docs/skaffold-go-slalom.md)

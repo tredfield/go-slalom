@@ -23,6 +23,12 @@ spec:
         command:
           - go-slalom
           - start
+        env:  
+          - name: HOST_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: go-slalom
+                key: host_name
         ports:
         - name: http
           containerPort: 8080
