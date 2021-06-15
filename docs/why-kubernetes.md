@@ -34,7 +34,7 @@ Use [Helm](https://helm.sh) Charts (and other tools) to deploy databases, middle
 
 Kubernetes provides both IP and DNS service discovery to allow applications to seamlessly communicate
 
-It also provides many network features needed in mondern applications with plugins and extensions available
+It also provides many network features needed in modern applications with plugins and extensions available
 
 ### Repeatable
 
