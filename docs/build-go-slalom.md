@@ -12,20 +12,18 @@ go-slalom demonstrates how to create a basic service to run in kubernetes. The s
 First lets clone and build go-slalom locally
 
 ```bash
-# tell go to use modules (still opt-in feature)
-export GO111MODULE=on
-
-# create a directory to checkout to
-mkdir /tmp/slalom
-cd /tmp/slalom
- 
 # clone go-slalom and cd to it
 git clone git@github.com:slalom/go-slalom.git
 cd go-slalom
 
+# tell go to use modules
+export GO111MODULE=on
+
 # build
 go build
 ```
+
+This will create a binary `go-slalom` in the current directory
 
 ## go-slalom cli
 
