@@ -1,0 +1,14 @@
+# Exclude everything:
+*
+
+# Now un-exclude files for build:
+!pkg
+!cmd
+!main.go
+!go.mod
+!go.sum
+!templates
+!static
+
+# TODO necessary for using git in dockerfile, should reivise to instead use build args
+!.git

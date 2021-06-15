@@ -62,12 +62,21 @@ You should see logging similar to below.
 {"level":"info","msg":"Starting server...","service":"api","time":"2019-05-09T13:22:03-07:00"}
 ```
 
-In a separate console run `curl localhost:8008/version`. You should see similar output
+In a separate console run `curl localhost:8008`. You should see similar output
 
 ```bash
 {
-  "commit": "unknown",
-  "version": "0.0.1"
+  "hostname": "TODO",
+  "version": "0.0.1",
+  "revision": "unknown",
+  "color": "",
+  "message": "",
+  "goos": "linux",
+  "goarch": "amd64",
+  "runtime": "go1.12.17",
+  "num_goroutine": "6",
+  "num_cpu": "6",
+  "magic_value": ""
 }
 ```
 
@@ -88,6 +97,41 @@ See `pkg/api/server.go`. It does the following:
 - wait for an interrupt
 - disable probes to tell kubernetes it is unavailable
 - gracefully shutdown server
+
+## Building with Docker
+
+For Kubernetes we need to containerize go-slalom. Below is a simple Dockerfile for go-slalom
+
+```docker
+# Base build image
+FROM golang:1.12 AS builder
+
+# set a working directory 
+WORKDIR /go/src/go-slalom
+
+# copy code
+COPY . .
+
+# build the app
+RUN go install
+
+# set starting point for the app
+ENTRYPOINT ["/go/bin/go-slalom"]
+```
+
+Lets create an image from it using the following command:
+
+```bash
+docker build -t go-slalom .
+```
+
+Once the image is built we can run it with Docker
+
+```bash
+docker run -p 8080:8080 go-slalom start
+```
+
+Now you can again run `curl localhost:8008`
 
 ## Next
 
