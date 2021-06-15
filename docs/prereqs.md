@@ -14,13 +14,13 @@ Docker Desktop includes Kubernetes. Use the appropriate link to download and ins
 
 - macOS
 
-<https://hub.docker.com/editions/community/docker-ce-desktop-mac>
+  <https://hub.docker.com/eitions/community/docker-ce-desktop-mac>
 
 - windows
 
-**Note for Windows you will need to use the Windows Subsystem for Linux to run commands in the guides. If necessary please install WSL here:** <https://docs.microsoft.com/en-us/windows/wsl/install-win10>
+  **Note** for Windows you will need to use the Windows Subsystem for Linux to run commands in the guides. If necessary please install WSL here: <https://docs.microsoft.com/en-us/windows/wsl/install-win10>
 
-<https://hub.docker.com/editions/community/docker-ce-desktop-windows>
+  <https://hub.docker.com/editions/community/docker-ce-desktop-windows>
 
 Once Docker Desktop is installed, you need to explicitly enable Kubernetes support. Click the Docker icon in the status bar, go to “Preferences”, and on the “Kubernetes” tab check “Enable Kubernetes”
 
@@ -32,16 +32,10 @@ This will start kubernetes and install `kubectl`.  This might take a while, but 
 
 Homebrew is a package manager
 
-- macOS
+- macOS, Linus, or WSL
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-- Linux or Windows Subsystem for Linux (WSL)
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Install Go

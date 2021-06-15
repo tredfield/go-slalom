@@ -14,15 +14,17 @@ Every major cloud provider now provides a managed Kubernetes offering. Thus you 
 
 ## Velocity
 
-Deploying a new version of an application or updating an application running in Kubernetes is fast and easy.
+Deploying a new version of an application or updating an application running in Kubernetes is fast and easy
 
 ## Easily Assemble a Complete Stack
 
 Use [Helm](https://helm.sh) Charts (and other tools) to deploy databases, middleware, and other components for your application quick and easily.
 
-## Scaling
+## Scaling and High Availability
 
-Efficiently scale horizontally using metrics (cpu, memory, etc). Soon, vertical auto-scaling.
+- Efficiently scale horizontally using metrics (cpu, memory, etc)
+- Vertical auto-scaling
+- High availability architecture
 
 ## Repeatable
 
