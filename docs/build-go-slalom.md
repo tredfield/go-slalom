@@ -13,7 +13,7 @@ First lets clone and build go-slalom locally
 
 ```bash
 # clone go-slalom and cd to it
-git clone git@github.com:slalom/go-slalom.git
+git clone git@github.com:tredfield/go-slalom.git
 cd go-slalom
 
 # tell go to use modules
