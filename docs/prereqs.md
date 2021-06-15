@@ -60,7 +60,7 @@ See ["How to Write Go Code"](https://golang.org/doc/code.html) for more informat
 
 ## Optional
 
-Below are not required helpful to do beforehand
+Below are not required but helpful to do beforehand
 
 ### Kubernetes Dashboard
 
