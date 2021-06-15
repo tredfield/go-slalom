@@ -2,6 +2,8 @@
 
 <https://github.com/slalom/go-slalom>
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/slalom/go-slalom)](https://goreportcard.com/report/github.com/slalom/go-slalom) [![Build Status](https://dev.azure.com/tredfield/go-slalom/_apis/build/status/slalom.go-slalom?branchName=master)](https://dev.azure.com/tredfield/go-slalom/_build/latest?definitionId=2&branchName=master)
+
 go-slalom is a tiny service made with [Go](https://golang.org) that showcases how to easily develop and deploy
 Go services in [Kubernetes](https://kubernetes.io).
 
@@ -16,13 +18,19 @@ This repository and guides will help you
 ## Guides
 
 - [Pre-requisite Instructions](docs/prereqs.md)
-- [Why Go](docs/why-go.md)
 - [Why Kubernetes](docs/why-kubernetes.md)
+- [Why Go](docs/why-go.md)
 - [Hello World in Go](docs/go-hello-world.md)
 - [Run go-slalom](docs/build-go-slalom.md)
 - [Deploy go-slalom with skaffold](docs/skaffold-go-slalom.md)
 - [Release go-slalom](docs/go-releaser.md)
+- [Deploy go-slalom with Azure DevOps](docs/azure-devops.md)
 - [What's Next?](docs/whats-next.md)
+
+## Additional Guides
+
+- [Create and serve a UI with go and go templates](docs/go-ui-templates.md)
+- [Faster Builds with Docker Layer Caching](docs/docker-layer-caching.md)
 
 ### Quick 101 on go and kubernetes
 

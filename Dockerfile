@@ -1,5 +1,5 @@
 # Base build image
-FROM golang:1.12 AS build_base
+FROM golang:1.12 AS builder
 
 WORKDIR /go/src/go-slalom
 
@@ -7,8 +7,7 @@ WORKDIR /go/src/go-slalom
 ENV GO111MODULE=on
 
 # We want to populate the module cache based on the go.{mod,sum} files.
-COPY go.mod .
-COPY go.sum .
+COPY go.mod go.sum ./
 
 # This is the ‘magic’ step that will download all the dependencies that are specified in
 # the go.mod and go.sum file.
@@ -19,7 +18,7 @@ RUN go mod download
 
 
 # This image builds the server
-FROM build_base AS compile
+FROM builder AS compile
 # Here we copy the rest of the source code
 COPY . .
 
@@ -31,5 +30,7 @@ RUN GIT_TAG=$(git describe --tags --always) GIT_COMMIT=$(git rev-list -1 HEAD) &
 FROM scratch AS go_slalom
 
 # Finally we copy the statically compiled Go binary.
+COPY --from=compile /go/src/go-slalom/templates ./templates
+COPY --from=compile /go/src/go-slalom/static ./static
 COPY --from=compile /go/bin/go-slalom /bin/go-slalom
 ENTRYPOINT ["/bin/go-slalom"]
