@@ -24,11 +24,11 @@ spec:
           - go-slalom
           - start
         env:  
-          - name: HOST_NAME
+          - name: MAGIC_VALUE
             valueFrom:
               configMapKeyRef:
                 name: go-slalom
-                key: host_name
+                key: magic_value
         ports:
         - name: http
           containerPort: 8080

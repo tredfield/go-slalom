@@ -94,7 +94,8 @@ You should see similar output below and logging in console where skaffold is run
   "goarch": "amd64",
   "runtime": "go1.12.4",
   "num_goroutine": "6",
-  "num_cpu": "8"
+  "num_cpu": "8",
+  "magic_value": "TODO"
 }
 ```
 
@@ -134,6 +135,6 @@ the tag.
 
 ## Next
 
-[Release go-slalom](go-releaser.md)
+[configmaps](configmaps.md)
 
 ![slalom-gopher](images/gopherski.png)

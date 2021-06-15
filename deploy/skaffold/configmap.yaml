@@ -4,4 +4,4 @@ metadata:
   name: go-slalom
 data:
   # property-like keys; each key maps to a simple value
-  host_name: "demo"
+  magic_value: "TODO"
